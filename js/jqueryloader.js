@@ -73,7 +73,7 @@ var loadvlist = function(y){
     'global': false,
      url: "http://www.cinebrunch.com/api/videos_v2.php?type="+b,
     success: function(data){
-      alert(data);
+//      alert(data);
       var trlistjson = data;//jQuery.parseJSON(data);
       $.each(trlistjson, function(key, val) {
 
