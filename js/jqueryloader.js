@@ -45,6 +45,7 @@ alert("q");
      success: function(data){
       alert(data);
       var trlistjson = jQuery.parseJSON(data);
+      alert(trlistjson);
       $.each(trlistjson, function(key, val) {
         this.MediaName = this.MediaName.length > 23? this.MediaName.substring(0,25)+"...": this.MediaName;
         if(this.UserLike && this.UserWatch){
