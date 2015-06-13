@@ -44,7 +44,7 @@ alert("q");
      url: "http://www.cinebrunch.com/api/media_v2.php?qtype=mvlist",
      success: function(data){
       alert(data);
-      var trlistjson = jQuery.parseJSON(data);
+      var trlistjson = data;//jQuery.parseJSON(data);
       alert(trlistjson);
       $.each(trlistjson, function(key, val) {
       	//alert(this.MediaName);
