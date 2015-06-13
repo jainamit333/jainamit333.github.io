@@ -38,7 +38,7 @@ alert("q");
   
   $.ajax({
     'async': false,
-    dataType: 'json',
+    dataType: 'jsonp',
      method:"GET",
     'global': false,
      url: "http://www.cinebrunch.com/api/media_v2.php?qtype=mvlist",
