@@ -35,7 +35,7 @@ var jqueryloader = function(x,y) {
 var loadmvlist = function(){
 alert("q");
   var b = null;
-  response.addHeader("Access-Control-Allow-Origin", "http://www.cinebrunch.com");
+  
   $.ajax({
     'async': false,
     dataType: 'jsonp',
