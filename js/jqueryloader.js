@@ -33,7 +33,7 @@ var jqueryloader = function(x,y) {
 }
 
 var loadmvlist = function(){
-alert("q");
+//alert("q");
   var b = null;
   
   $.ajax({
@@ -43,9 +43,9 @@ alert("q");
     'global': false,
      url: "http://www.cinebrunch.com/api/media_v2.php?qtype=mvlist",
      success: function(data){
-      alert(data);
+  //    alert(data);
       var trlistjson = data;//jQuery.parseJSON(data);
-      alert(trlistjson);
+   //   alert(trlistjson);
       $.each(trlistjson, function(key, val) {
       	//alert(this.MediaName);
         this.MediaName = this.MediaName.length > 23? this.MediaName.substring(0,25)+"...": this.MediaName;
@@ -68,12 +68,13 @@ var loadvlist = function(y){
   var b = y=="trlist" ? "trailer":"songs";
   $.ajax({
     'async': false,
+    dataType: 'jsonp',
      method:"GET",
     'global': false,
      url: "http://www.cinebrunch.com/api/videos_v2.php?type="+b,
     success: function(data){
   //    alert(data);
-      var trlistjson = jQuery.parseJSON(data);
+      var trlistjson = data;//jQuery.parseJSON(data);
       $.each(trlistjson, function(key, val) {
 
         //if viewcount is null set it to 0
@@ -108,13 +109,14 @@ var scroller = function (l_token,l_context) {
     //    alert("scr"+l_token+" "+code+" "+l_context);
     $.ajax({
 			method:"Get",
+			dataType: 'jsonp',
 			url: "http://www.cinebrunch.com/api/scroller_v2.php?token="+l_token+"&code="+code+"&context="+l_context,
 			success: function(data){
         //alert(data);
 				try{
 					if(data.length > 0){
 
-					var obj = jQuery.parseJSON(data);
+					var obj = data;//jQuery.parseJSON(data);
 
 					if(obj.length < 20){
 						more_data = false;
