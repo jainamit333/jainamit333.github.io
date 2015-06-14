@@ -105,14 +105,14 @@ var scroller = function (l_token,l_context) {
   var context = l_context;
 
 	if(l_token == -1 || (limit < 120 && post_mat.length < 8 && more_data) ){
-    alert("ajaz call");
+    //alert("ajaz call");
     //    alert("scr"+l_token+" "+code+" "+l_context);
     $.ajax({
 			method:"Get",
 			dataType: 'jsonp',
 			url: "http://www.cinebrunch.com/api/scroller_v2.php?token="+l_token+"&code="+code+"&context="+l_context,
 			success: function(data){
-        alert(data);
+       // alert(data);
 				try{
 					if(data.length > 0){
 
