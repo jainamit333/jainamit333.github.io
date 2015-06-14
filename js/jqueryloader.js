@@ -112,7 +112,7 @@ var scroller = function (l_token,l_context) {
 			dataType: 'jsonp',
 			url: "http://www.cinebrunch.com/api/scroller_v2.php?token="+l_token+"&code="+code+"&context="+l_context,
 			success: function(data){
-        //alert(data);
+        alert(data);
 				try{
 					if(data.length > 0){
 
