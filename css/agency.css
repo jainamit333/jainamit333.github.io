@@ -297,6 +297,7 @@ header .intro-text .intro-lead-in {
     font-size: 20px;
     font-style: italic;
     line-height: 20px;
+    color:yellow;
 }
 
 header .intro-text .intro-heading {
@@ -306,6 +307,7 @@ header .intro-text .intro-heading {
     font-size: 10px;
     font-weight: 100;
     line-height: 10px;
+    color:red;
 }
 
 @media(min-width:768px) {
