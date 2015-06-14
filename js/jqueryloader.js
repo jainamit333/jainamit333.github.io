@@ -35,7 +35,7 @@ var jqueryloader = function(x,y) {
 var loadmvlist = function(){
 //alert("q");
   var b = null;
-  
+
   $.ajax({
     'async': false,
     dataType: 'jsonp',
@@ -50,7 +50,9 @@ var loadmvlist = function(){
       	//alert(this.MediaName);
         this.MediaName = this.MediaName.length > 23? this.MediaName.substring(0,25)+"...": this.MediaName;
         if(this.UserLike && this.UserWatch){
-          $(".mvlist").append('<div class="col-sm-3 movie-section-unit movie-section-unit-scroller '+this.Release_cat+'" > <div class="team-member" > <img data-src="http://www.cinebrunch.com/images/media/smallposters/Poster'+this.MediaId+'.jpg" src="http://www.cinebrunch.com/images/media/smallposters/default.jpg" class="img-responsive img-rounded lazy-image" alt=""> <div class="media_poster_actionbar"> <i class="fa fa-heart selected"></i> <i class="fa fa-calendar selected"></i> </div> <h4 >'+this.MediaName+'</h4> <p class="text-muted"> <a class="badge blueBadge marginbtm5 margin2" href="">Feb 27</a> <a class="badge yellowBadge marginbtm5 margin2" href="">English</a> <a class="badge purpleBadge marginbtm5 margin2" href="">Drama</a> <a class="badge purpleBadge marginbtm5 margin2" href="">Action</a> </p> <ul class="list-inline social-buttons"> <li ><a href="#" ><i class="fa fa-google-plus"></i></a> </li> <li><a href="#"><i class="fa fa-facebook"></i></a> </li> <li><a href="#"><i class="fa fa-linkedin"></i></a> </li> </ul> </div></div>');
+          $(".mvlist").append('<div class="col-sm-3 movie-section-unit movie-section-unit-scroller '+this.Release_cat+'" > <div class="team-member" >
+          <img data-src="http://www.cinebrunch.com/images/media/smallposters/Poster'+this.MediaId+'.jpg" src="http://www.cinebrunch.com/images/media/smallposters/default.jpg" class="img-responsive img-rounded lazy-image" alt="">
+          <div class="media_poster_actionbar"> <i class="fa fa-heart selected"></i> <i class="fa fa-calendar selected"></i> </div> <h4 >'+this.MediaName+'</h4> <p class="text-muted"> <a class="badge blueBadge marginbtm5 margin2" href="">'+this.ReleaseDate+'</a> <a class="badge yellowBadge marginbtm5 margin2" href="">English</a> <a class="badge purpleBadge marginbtm5 margin2" href="">Drama</a> <a class="badge purpleBadge marginbtm5 margin2" href="">Action</a> </p> <ul class="list-inline social-buttons"> <li ><a href="#" ><i class="fa fa-google-plus"></i></a> </li> <li><a href="#"><i class="fa fa-facebook"></i></a> </li> <li><a href="#"><i class="fa fa-linkedin"></i></a> </li> </ul> </div></div>');
         }else if(this.UserLike && !this.UserWatch){
           $(".mvlist").append('<div class="col-sm-3 movie-section-unit movie-section-unit-scroller '+this.Release_cat+'" > <div class="team-member" > <img data-src="http://www.cinebrunch.com/images/media/smallposters/Poster'+this.MediaId+'.jpg" src="http://www.cinebrunch.com/images/media/smallposters/default.jpg" class="img-responsive img-rounded lazy-image" alt=""> <div class="media_poster_actionbar"> <i class="fa fa-heart selected"></i> <i class="fa fa-calendar "></i> </div> <h4 >'+this.MediaName+'</h4> <p class="text-muted"> <a class="badge blueBadge marginbtm5 margin2" href="">Feb 27</a> <a class="badge yellowBadge marginbtm5 margin2" href="">English</a> <a class="badge purpleBadge marginbtm5 margin2" href="">Drama</a> <a class="badge purpleBadge marginbtm5 margin2" href="">Action</a> </p> <ul class="list-inline social-buttons"> <li ><a href="#" ><i class="fa fa-google-plus"></i></a> </li> <li><a href="#"><i class="fa fa-facebook"></i></a> </li> <li><a href="#"><i class="fa fa-linkedin"></i></a> </li> </ul> </div></div>');
         }else if(!this.UserLike && this.UserWatch){
