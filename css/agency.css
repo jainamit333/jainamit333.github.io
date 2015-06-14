@@ -129,7 +129,7 @@ fieldset[disabled] .btn-primary.active {
 .btn-circle {
   width: 70px;
   height: 70px;
-  margin-top: 15px;
+  margin-top: 75px;
   padding: 7px 16px;
   border: 2px solid #fff;
   border-radius: 100%!important;
@@ -307,7 +307,7 @@ header .intro-text .intro-heading {
     font-size: 10px;
     font-weight: 100;
     line-height: 10px;
-    color:red;
+
 }
 
 @media(min-width:768px) {
