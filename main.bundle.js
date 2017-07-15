@@ -85,7 +85,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<app-menu-bar></app-menu-bar>\n\n<div class=\"container\">\n  <router-outlet></router-outlet>\n  <!--<div class=\"row\">-->\n  <!--<md-card *ngFor=\"let card of layout.card\"  [ngClass]=\"[card.color,card.large_col,card.small_col,card.extra_small]\">-->\n  <!--<md-card-header>-->\n    <!--<img md-card-avatar src=\"{{ card.avatar}}\">-->\n    <!--<md-card-title>{{card.title }}</md-card-title>-->\n    <!--<md-card-subtitle>{{ card.description }}</md-card-subtitle>-->\n  <!--</md-card-header>-->\n  <!--<img md-card-image src=\"{{ card.image}}\" class=\"md-card-image\">-->\n  <!--<md-card-content>-->\n    <!--<p>{{ card.content }} </p>-->\n  <!--</md-card-content>-->\n  <!--<md-card-footer >-->\n    <!--<i *ngFor=\" let action of card.actions\" class=\"material-icons\">{{action}}</i>-->\n  <!--</md-card-footer>-->\n<!--</md-card>-->\n<!--</div>-->\n</div>\n"
+module.exports = "\n<app-menu-bar></app-menu-bar>\n\n<div class=\"container\">\n  <router-outlet></router-outlet>\n</div>\n"
 
 /***/ }),
 
@@ -369,7 +369,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/menu-bar/menu-bar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header>\n  <nav class=\"cd-stretchy-nav \" [ngClass]=\"{'nav-is-visible': menuExtended}\">\n    <a class=\"cd-nav-trigger\" href=\"#0\" (click)=\"toggleMenu()\">\n      Menu\n      <span aria-hidden=\"true\"></span>\n    </a>\n\n    <ul>\n      <li><a href=\"#0\" routerLink=\"/\" class=\"active\"><span class=\"menu-text hidden-xs\">Home</span></a></li>\n      <li><a href=\"#0\" routerLink=\"portfolio\"><span class=\"menu-text hidden-xs\">Portfolio</span></a></li>\n      <li><a href=\"#0\" routerLink=\"timeline\"><span class=\"menu-text hidden-xs\">Timeline</span></a></li>\n      <li><a href=\"#0\" routerLink=\"gallery\"><span class=\"menu-text hidden-xs\">Gallery</span></a></li>\n      <li><a href=\"#0\" routerLink=\"contact\"><span class=\"menu-text hidden-xs\">Contact</span></a></li>\n\n    </ul>\n\n    <span aria-hidden=\"true\" class=\"stretchy-nav-bg\"></span>\n  </nav>\n</header>\n"
+module.exports = "<header>\n  <nav class=\"cd-stretchy-nav \" [ngClass]=\"{'nav-is-visible': menuExtended}\">\n    <a class=\"cd-nav-trigger\"  (click)=\"toggleMenu()\">\n      Menu\n      <span aria-hidden=\"true\"></span>\n    </a>\n\n    <ul>\n      <li><a href=\"#0\" routerLink=\"/\" class=\"active\"><span class=\"menu-text hidden-xs\">Home</span></a></li>\n      <li><a href=\"#0\" routerLink=\"portfolio\"><span class=\"menu-text hidden-xs\">Portfolio</span></a></li>\n      <li><a href=\"#0\" routerLink=\"timeline\"><span class=\"menu-text hidden-xs\">Timeline</span></a></li>\n      <li><a href=\"#0\" routerLink=\"gallery\"><span class=\"menu-text hidden-xs\">Gallery</span></a></li>\n      <li><a href=\"#0\" routerLink=\"contact\"><span class=\"menu-text hidden-xs\">Contact</span></a></li>\n\n    </ul>\n\n    <span aria-hidden=\"true\" class=\"stretchy-nav-bg\"></span>\n  </nav>\n</header>\n"
 
 /***/ }),
 
@@ -421,7 +421,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "md-card{\n  margin: 4px 7px 4px 1px;\n  min-height: 500px;\n  max-height: 700px;\n}\nmd-card-title{\n  font-weight: bold;\n}\nmd-card-footer i{\n  margin-right: 2px;\n  margin-left: 7px;\n}\n\nmd-card-footer i:hover{\n\n  background-color: lightgrey;\n  border-radius: 3px;\n}\n\nmd-card-footer i:active{\n\n  background-color: grey;\n  border-radius: 3px;\n}\n\n.female{\n  background-color: pink;\n\n}\n.md-card-image{\n\n  height: 300px;\n}\n\n.male {\n  background-color: steelblue;\n}\n\n.both{\n\n  background: #8C29FF; /* For browsers that do not support gradients */ /* For Safari 5.1 to 6.0 */ /* For Opera 11.1 to 12.0 */ /* For Firefox 3.6 to 15 */\n  background: linear-gradient(to right, pink , steelblue); /* Standard syntax */\n}\n", ""]);
+exports.push([module.i, "md-card-footer i:hover{\n\n  background-color: lightgrey;\n  border-radius: 3px;\n}\n\nmd-card{\n  margin: 4px 7px 4px 1px;\n  min-height: 500px;\n  max-height: 700px;\n}\nmd-card-title{\n  font-weight: bold;\n}\nmd-card-footer i{\n  margin-right: 2px;\n  margin-left: 7px;\n}\n\nmd-card-footer i:active{\n\n  background-color: grey;\n  border-radius: 3px;\n}\n\n.female{\n  background-color: pink;\n\n}\n.md-card-image{\n\n  height: 300px;\n}\n\n.male {\n  background-color: steelblue;\n}\n\n.both{\n\n  background: #8C29FF; /* For browsers that do not support gradients */ /* For Safari 5.1 to 6.0 */ /* For Opera 11.1 to 12.0 */ /* For Firefox 3.6 to 15 */\n  background: linear-gradient(to right, pink , steelblue); /* Standard syntax */\n}\n", ""]);
 
 // exports
 
@@ -463,7 +463,6 @@ var PorfolioCardComponent = (function () {
     PorfolioCardComponent.prototype.ngOnInit = function () {
         var _this = this;
         this._ConfigurationService.getLayoutData(this.dataPath).subscribe(function (res) {
-            console.log(res);
             _this.data = res;
         });
     };
@@ -617,7 +616,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "ol, ul {\n  list-style: none;\n}\n\n.cd-horizontal-timeline {\n  opacity: 0;\n  margin: 1em auto;\n  transition: opacity 0.2s;\n}\n\n.cd-horizontal-timeline::before {\n  /* never visible - this is used in jQuery to check the current MQ */\n  content: 'mobile';\n  display: none;\n}\n\n.cd-horizontal-timeline.loaded {\n  /* show the timeline after events position has been set (using JavaScript) */\n  opacity: 1;\n}\n\n.cd-horizontal-timeline .timeline {\n  position: relative;\n  height: 100px;\n  width: 90%;\n  max-width: 600px;\n  margin: 0 auto;\n}\n\n.cd-horizontal-timeline .events-wrapper {\n  position: relative;\n  height: 100%;\n  margin: 0 40px;\n  overflow: hidden;\n}\n\n.cd-horizontal-timeline .events-wrapper::after, .cd-horizontal-timeline .events-wrapper::before {\n  /* these are used to create a shadow effect at the sides of the timeline */\n  content: '';\n  position: absolute;\n  z-index: 2;\n  top: 0;\n  height: 100%;\n  width: 60px;\n}\n\n.cd-horizontal-timeline .events-wrapper::before {\n  left: 0;\n  background-image: linear-gradient(to right, #fff, rgba(248, 248, 248, 0));\n}\n\n.cd-horizontal-timeline .events-wrapper::after {\n  right: 0;\n  background-image: linear-gradient(to left, #fff, rgba(248, 248, 248, 0));\n}\n\n.cd-horizontal-timeline .events {\n  /* this is the grey line/timeline */\n  position: absolute;\n  z-index: 1;\n  left: 0;\n  top: 49px;\n  height: 2px;\n  /* width will be set using JavaScript */\n  background: #dfdfdf;\n  transition: -webkit-transform 0.4s;\n  transition: transform 0.4s;\n  transition: transform 0.4s, -webkit-transform 0.4s;\n}\n\n.cd-horizontal-timeline .filling-line {\n  /* this is used to create the green line filling the timeline */\n  position: absolute;\n  z-index: 1;\n  left: 0;\n  top: 0;\n  height: 100%;\n  width: 100%;\n  background-color: #7b9d6f;\n  -webkit-transform: scaleX(0);\n  transform: scaleX(0);\n  -webkit-transform-origin: left center;\n  transform-origin: left center;\n  transition: -webkit-transform 0.3s;\n  transition: transform 0.3s;\n  transition: transform 0.3s, -webkit-transform 0.3s;\n}\n\n.cd-horizontal-timeline .events a {\n  position: absolute;\n  bottom: 0;\n  z-index: 2;\n  text-align: center;\n  font-size: 12px;\n  text-decoration: none;\n  padding-bottom: 15px;\n  color: #383838;\n  /* fix bug on Safari - text flickering while timeline translates */\n  -webkit-transform: translateZ(0);\n  transform: translateZ(0);\n}\n\n.cd-horizontal-timeline .events a::after {\n  /* this is used to create the event spot */\n  content: '';\n  position: absolute;\n  left: 50%;\n  right: auto;\n  -webkit-transform: translateX(-50%);\n  transform: translateX(-50%);\n  bottom: -5px;\n  height: 8px;\n  width: 8px;\n  border-radius: 50%;\n  border: 2px solid #dfdfdf;\n  background-color: #f8f8f8;\n  transition: background-color 0.3s, border-color 0.3s;\n}\n\n.cd-horizontal-timeline .events a:hover::after {\n  background-color: #7b9d6f;\n  border-color: #7b9d6f;\n}\n\n.cd-horizontal-timeline .events a.selected {\n  pointer-events: none;\n}\n\n.cd-horizontal-timeline .events a.selected::after {\n  background-color: #7b9d6f;\n  border-color: #7b9d6f;\n}\n\n.cd-horizontal-timeline .events a.older-event::after {\n  border-color: #7b9d6f;\n}\n\n@media only screen and (min-width: 1100px) {\n  .cd-horizontal-timeline {\n    margin: 2em auto;\n  }\n\n  .cd-horizontal-timeline::before {\n    /* never visible - this is used in jQuery to check the current MQ */\n    content: 'desktop';\n  }\n}\n\n.cd-horizontal-timeline li span {\n  position: absolute;\n  left: 1700px;\n  bottom: -30px;\n  font-size: 12px;\n}\n\n.cd-timeline-navigation a {\n  /* these are the left/right arrows to navigate the timeline */\n  position: absolute;\n  z-index: 1;\n  top: 50%;\n  bottom: auto;\n  -webkit-transform: translateY(-50%);\n  transform: translateY(-50%);\n  height: 34px;\n  width: 34px;\n  border-radius: 50%;\n  border: 2px solid #dfdfdf;\n  /* replace text with an icon */\n  overflow: hidden;\n  color: transparent;\n  text-indent: 100%;\n  white-space: nowrap;\n  transition: border-color 0.3s;\n}\n\n.cd-timeline-navigation a::after {\n  /* arrow icon */\n  content: '';\n  position: absolute;\n  height: 16px;\n  width: 16px;\n  left: 50%;\n  top: 50%;\n  bottom: auto;\n  right: auto;\n  -webkit-transform: translateX(-50%) translateY(-50%);\n  transform: translateX(-50%) translateY(-50%);\n  background: url(/assets/img/cd-arrow.svg) no-repeat 0 0;\n}\n\n.cd-timeline-navigation a.prev {\n  left: 0;\n  -webkit-transform: translateY(-50%) rotate(180deg);\n  transform: translateY(-50%) rotate(180deg);\n}\n\n.cd-timeline-navigation a.next {\n  right: 0;\n}\n\n.cd-timeline-navigation a:hover {\n  border-color: #7b9d6f;\n}\n\n.cd-timeline-navigation a.inactive {\n  cursor: not-allowed;\n}\n\n.cd-timeline-navigation a.inactive::after {\n  background-position: 0 -16px;\n}\n\n.cd-timeline-navigation a.inactive:hover {\n  border-color: #dfdfdf;\n}\n\n.cd-horizontal-timeline .events-content {\n  position: relative;\n  width: 100%;\n  margin: 2em 0;\n  overflow: hidden;\n  transition: height 0.4s;\n}\n\n.cd-horizontal-timeline .events-content li {\n  position: absolute;\n  z-index: 1;\n  width: 100%;\n  left: 0;\n  top: 0;\n  padding: 0 5%;\n  opacity: 0;\n}\n\n.cd-horizontal-timeline .events-content li > * {\n  max-width: 800px;\n  margin: 0 auto;\n}\n\n.cd-horizontal-timeline .events-content h2 {\n  font-weight: bold;\n  font-size: 2.6rem;\n  line-height: 1.2;\n}\n\n.cd-horizontal-timeline .events-content em {\n  display: block;\n  font-style: italic;\n  margin: 10px auto;\n}\n\n.cd-horizontal-timeline .events-content em::before {\n  content: '- ';\n}\n\n.cd-horizontal-timeline .events-content p {\n  font-size: 1.4rem;\n  color: #959595;\n}\n\n.cd-horizontal-timeline .events-content em, .cd-horizontal-timeline .events-content p {\n  line-height: 1.6;\n}\n\n@media only screen and (min-width: 768px) {\n  .cd-horizontal-timeline .events-content h2 {\n    font-size: 7rem;\n  }\n\n  .cd-horizontal-timeline .events-content em {\n    font-size: 2rem;\n  }\n\n  .cd-horizontal-timeline .events-content p {\n    font-size: 1.8rem;\n  }\n}\n\n.events-content li{\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -ms-flex-line-pack: center;\n      align-content: center;\n}\n.events-content li md-card{\n  width: 70%;\n}\n\nmd-card-footer i:hover{\n\n  background-color: lightgrey;\n  border-radius: 3px;\n}\n\nmd-card{\n  margin: 4px 7px 4px 1px;\n  min-height: 200px;\n  max-height: 400px;\n}\nmd-card-title{\n  font-weight: bold;\n  font-size: large;\n  font-family: Arial;\n}\nmd-card-subtitle{\n\n  display: block;\n  text-align: center;\n  font-size: 10px;\n  margin-top: 0em;\n  opacity: 0.8;\n\n\n}\nmd-card-footer i{\n  margin-right: 2px;\n  margin-left: 7px;\n}\n\nmd-card-footer i:active{\n\n  background-color: grey;\n  border-radius: 3px;\n}\n\n.female{\n  background-color: pink;\n\n}\n.md-card-image{\n\n  height: 200px;\n}\n\n.male {\n  background-color: steelblue;\n}\n\nmd-card-content p{\n\n  font-size: 10px;\n  font-family: \"Al Nile\";\n}\n\n.both{\n\n  background: #8C29FF; /* For browsers that do not support gradients */ /* For Safari 5.1 to 6.0 */ /* For Opera 11.1 to 12.0 */ /* For Firefox 3.6 to 15 */\n  background: linear-gradient(to right, pink , steelblue); /* Standard syntax */\n}\n", ""]);
 
 // exports
 
@@ -630,7 +629,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/timeline-card/timeline-card.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  timeline-card works!\n</p>\n"
+module.exports = "<section class=\"cd-horizontal-timeline\" [ngClass]=\"{'loaded': loaded}\">\n  <div class=\"timeline\">\n    <div class=\"events-wrapper\" #timelineWrapper>\n      <div class=\"events\" #eventsWrapper>\n        <ol>\n          <li *ngFor=\"let item of timelineElements; let index = index\">\n            <a #timelineEvents href=\"#\" [attr.data-date]=\"item.date | date:dateFormat\"\n               [ngClass]=\"{'selected': item.selected, 'older-event': index < selectedIndex}\"\n               (click)=\"onEventClick($event, item)\">{{item.date | date:dateFormat}}</a>\n            <span>{{item.caption}}</span>\n          </li>\n        </ol>\n        <span class=\"filling-line\" aria-hidden=\"true\" #fillingLine></span>\n      </div>\n    </div>\n\n    <ul class=\"cd-timeline-navigation\">\n      <li>\n        <a href=\"#\" (click)=\"onPrevClick($event)\" class=\"prev\" [ngClass]=\"{'inactive':prevLinkInactive}\">Prev</a>\n      </li>\n      <li>\n        <a href=\"#\" (click)=\"onNextClick($event)\" class=\"next\" [ngClass]=\"{'inactive':nextLinkInactive}\">Next</a>\n      </li>\n    </ul>\n  </div>\n\n  <div class=\"events-content\" #eventsContent *ngIf=\"showContent\">\n    <ol>\n      <li *ngFor=\"let item of timelineElements; let index = index\" [attr.data-date]=\"item.date | date:dateFormat\"\n          [attr.data-state]=\"item.selected ? 'active' : (index < selectedIndex ? 'left' : 'right')\"\n          [@contentState]=\"item.selected ? 'active' : (index < selectedIndex ? 'left' : 'right')\">\n        <md-card >\n          <md-card-header>\n            <!--<img md-card-avatar src=\"{{ data.avatar}}\">-->\n            <md-card-title>{{item.title}}</md-card-title>\n            <md-card-subtitle>{{item.date | date:dateFormat}}</md-card-subtitle>\n          </md-card-header>\n          <img *ngIf=\"item.imagePresent\" md-card-image src=\"{{ item.image}}\" class=\"md-card-image\">\n          <md-card-content>\n            <p>{{item.content}}</p>\n          </md-card-content>\n          <!--&lt;!&ndash;<md-card-footer >&ndash;&gt;-->\n            <!--&lt;!&ndash;<i *ngFor=\" let action of data.actions\" class=\"material-icons\">{{action}}</i>&ndash;&gt;-->\n          <!--&lt;!&ndash;</md-card-footer>&ndash;&gt;-->\n        </md-card>\n\n\n        <!--<h2>{{item.title}}</h2>-->\n        <!--<em>{{item.date | date:dateFormat}}</em>-->\n        <!--<p>{{item.content}}</p>-->\n      </li>\n    </ol>\n  </div>\n</section>\n"
 
 /***/ }),
 
@@ -650,22 +649,308 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var TimelineCardComponent = (function () {
+var TimelineCardComponent = TimelineCardComponent_1 = (function () {
     function TimelineCardComponent() {
+        this.prevLinkInactive = true;
+        this.nextLinkInactive = false;
+        this.loaded = true;
+        this.selectedIndex = 0;
+        this.timelineTotWidth = 60;
+        this.eventsMinDistance = 80;
+        this.dateFormat = 'd MMM yy';
+        this.disabled = false;
+        this.showContent = false;
     }
     TimelineCardComponent.prototype.ngOnInit = function () {
     };
+    TimelineCardComponent.prototype.ngAfterViewChecked = function () {
+        console.log('step1');
+        if (this.timelineElements && this.timelineElements.length) {
+            console.log('step1.1');
+            for (var i = 0; i < this.timelineElements.length; i++) {
+                if (this.timelineElements[i].selected) {
+                    this.selectedIndex = i;
+                    break;
+                }
+            }
+            console.log('step2');
+            this.initTimeline(this.timelineElements);
+        }
+    };
+    TimelineCardComponent.prototype.ngOnChanges = function () {
+    };
+    TimelineCardComponent.prototype.ngAfterViewInit = function () {
+        console.log('step1');
+        if (this.timelineElements && this.timelineElements.length) {
+            console.log('step1.1');
+            for (var i = 0; i < this.timelineElements.length; i++) {
+                if (this.timelineElements[i].selected) {
+                    this.selectedIndex = i;
+                    break;
+                }
+            }
+            console.log('step2');
+            this.initTimeline(this.timelineElements);
+        }
+    };
+    TimelineCardComponent.prototype.onPrevClick = function (event) {
+        event.preventDefault();
+        this.updateSlide(this.timelineTotWidth, 'prev');
+    };
+    TimelineCardComponent.prototype.onNextClick = function (event) {
+        event.preventDefault();
+        this.updateSlide(this.timelineTotWidth, 'next');
+    };
+    TimelineCardComponent.prototype.onEventClick = function (event, selectedItem) {
+        event.preventDefault();
+        if (this.disabled) {
+            return;
+        }
+        var element = event.target;
+        // detect click on the a single event - show new event content
+        var visibleItem = this.timelineElements[0];
+        this.timelineElements.forEach(function (item) {
+            if (item.selected && item != selectedItem) {
+                visibleItem = item;
+                item.selected = false;
+            }
+        });
+        this.selectedIndex = this.timelineElements.indexOf(selectedItem);
+        selectedItem.selected = true;
+        TimelineCardComponent_1.updateFilling(element, this.fillingLine, this.timelineTotWidth);
+    };
+    TimelineCardComponent.prototype.initTimeline = function (timeLines) {
+        console.log('step3');
+        var eventsMinLapse = TimelineCardComponent_1.minLapse(timeLines);
+        // assign a left position to the single events along the timeline
+        this.setDatePosition(timeLines, this.eventsMinDistance, eventsMinLapse);
+        // assign a width to the timeline
+        console.log('step4');
+        this.timelineTotWidth = this.setTimelineWidth(timeLines, this.eventsMinDistance, eventsMinLapse);
+        // the timeline has been initialize - show it
+        this.loaded = true;
+    };
+    TimelineCardComponent.prototype.updateSlide = function (timelineTotWidth, string) {
+        // retrieve translateX value of eventsWrapper
+        var translateValue = TimelineCardComponent_1.getTranslateValue(this.eventsWrapper.nativeElement);
+        var wrapperWidth = Number(window.getComputedStyle(this.timelineWrapper.nativeElement).width.replace('px', ''));
+        // translate the timeline to the left('next')/right('prev')
+        if (string == 'next') {
+            this.translateTimeline(translateValue - wrapperWidth + this.eventsMinDistance, wrapperWidth - timelineTotWidth);
+        }
+        else {
+            this.translateTimeline(translateValue + wrapperWidth - this.eventsMinDistance, null);
+        }
+    };
+    TimelineCardComponent.prototype.updateTimelinePosition = function (string, element) {
+        // translate timeline to the left/right according to the position of the selected event
+        var eventStyle = window.getComputedStyle(element, null);
+        var eventLeft = Number(eventStyle.getPropertyValue('left').replace('px', ''));
+        var timelineWidth = Number(window.getComputedStyle(this.timelineWrapper.nativeElement).width.replace('px', ''));
+        var timelineTotWidth = Number(window.getComputedStyle(this.eventsWrapper.nativeElement).width.replace('px', ''));
+        var timelineTranslate = TimelineCardComponent_1.getTranslateValue(this.eventsWrapper.nativeElement);
+        if ((string == 'next' && eventLeft > timelineWidth - timelineTranslate) || (string == 'prev' && eventLeft < -timelineTranslate)) {
+            this.translateTimeline(-eventLeft + timelineWidth / 2, timelineWidth - timelineTotWidth);
+        }
+    };
+    TimelineCardComponent.prototype.translateTimeline = function (value, totWidth) {
+        // only negative translate value
+        value = (value > 0) ? 0 : value;
+        // do not translate more than timeline width
+        value = (!(totWidth == null) && value < totWidth) ? totWidth : value;
+        TimelineCardComponent_1.setTransformValue(this.eventsWrapper.nativeElement, 'translateX', value + 'px');
+        // update navigation arrows visibility
+        this.prevLinkInactive = value == 0;
+        this.nextLinkInactive = value == totWidth;
+    };
+    TimelineCardComponent.updateFilling = function (selectedEvent, filling, totWidth) {
+        // change .filling-line length according to the selected event
+        console.log(selectedEvent);
+        var eventStyle = window.getComputedStyle(selectedEvent, null);
+        var eventLeft = eventStyle.getPropertyValue("left");
+        var eventWidth = eventStyle.getPropertyValue("width");
+        var eventLeftNum = Number(eventLeft.replace('px', '')) + Number(eventWidth.replace('px', '')) / 2;
+        var scaleValue = eventLeftNum / totWidth;
+        TimelineCardComponent_1.setTransformValue(filling.nativeElement, 'scaleX', scaleValue);
+    };
+    TimelineCardComponent.prototype.setDatePosition = function (elements, min, eventsMinLapse) {
+        var timelineEventsArray = this.timelineEvents.toArray();
+        console.log('date position');
+        console.log(timelineEventsArray);
+        var i = 0;
+        for (var _i = 0, elements_1 = elements; _i < elements_1.length; _i++) {
+            var component = elements_1[_i];
+            var distance = TimelineCardComponent_1.dayDiff(elements[0].date, component.date);
+            var distanceNorm = Math.round(distance / eventsMinLapse) + 2;
+            timelineEventsArray[i].nativeElement.style.left = distanceNorm * min + 'px';
+            // span
+            var span = timelineEventsArray[i].nativeElement.parentElement.children[1];
+            var aWidth = TimelineCardComponent_1.getElementWidth(timelineEventsArray[i].nativeElement);
+            var spanWidth = TimelineCardComponent_1.getElementWidth(span);
+            span.style.left = distanceNorm * min + (aWidth - spanWidth) / 2 + 'px';
+            i++;
+        }
+    };
+    TimelineCardComponent.prototype.setTimelineWidth = function (elements, width, eventsMinLapse) {
+        var timeSpan = TimelineCardComponent_1.dayDiff(elements[0].date, elements[elements.length - 1].date);
+        var timeSpanNorm = timeSpan / eventsMinLapse;
+        timeSpanNorm = Math.round(timeSpanNorm) + 4;
+        var totalWidth = timeSpanNorm * width;
+        this.eventsWrapper.nativeElement.style.width = totalWidth + 'px';
+        var aHref = this.eventsWrapper.nativeElement.querySelectorAll('a.selected')[0];
+        console.log(this.eventsWrapper.nativeElement);
+        TimelineCardComponent_1.updateFilling(aHref, this.fillingLine, totalWidth);
+        this.updateTimelinePosition('next', aHref);
+        return totalWidth;
+    };
+    TimelineCardComponent.getElementWidth = function (element) {
+        return Number(window.getComputedStyle(element, null).width.replace('px', ''));
+    };
+    TimelineCardComponent.parentElement = function (element, tagName) {
+        if (!element || !element.parentNode) {
+            return null;
+        }
+        var parent = element.parentNode;
+        while (true) {
+            if (parent.tagName.toLowerCase() == tagName) {
+                return parent;
+            }
+            parent = parent.parentNode;
+            if (!parent) {
+                return null;
+            }
+        }
+    };
+    TimelineCardComponent.getTranslateValue = function (timeline) {
+        var timelineStyle = window.getComputedStyle(timeline, null);
+        var timelineTranslate = timelineStyle.getPropertyValue("-webkit-transform") ||
+            timelineStyle.getPropertyValue("-moz-transform") ||
+            timelineStyle.getPropertyValue("-ms-transform") ||
+            timelineStyle.getPropertyValue("-o-transform") ||
+            timelineStyle.getPropertyValue("transform");
+        var translateValue = 0;
+        if (timelineTranslate.indexOf('(') >= 0) {
+            var timelineTranslateStr = timelineTranslate
+                .split('(')[1]
+                .split(')')[0]
+                .split(',')[4];
+            translateValue = Number(timelineTranslateStr);
+        }
+        return translateValue;
+    };
+    TimelineCardComponent.setTransformValue = function (element, property, value) {
+        element.style["-webkit-transform"] = property + "(" + value + ")";
+        element.style["-moz-transform"] = property + "(" + value + ")";
+        element.style["-ms-transform"] = property + "(" + value + ")";
+        element.style["-o-transform"] = property + "(" + value + ")";
+        element.style["transform"] = property + "(" + value + ")";
+    };
+    TimelineCardComponent.dayDiff = function (first, second) {
+        return Math.round(second - first);
+    };
+    TimelineCardComponent.minLapse = function (elements) {
+        var result;
+        for (var i = 1; i < elements.length; i++) {
+            var distance = TimelineCardComponent_1.dayDiff(elements[i - 1].date, elements[i].date);
+            result = result ? Math.min(result, distance) : distance;
+        }
+        return result;
+    };
     return TimelineCardComponent;
 }());
-TimelineCardComponent = __decorate([
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["O" /* Input */])(),
+    __metadata("design:type", Number)
+], TimelineCardComponent.prototype, "eventsMinDistance", void 0);
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["O" /* Input */])(),
+    __metadata("design:type", Array)
+], TimelineCardComponent.prototype, "timelineElements", void 0);
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["O" /* Input */])(),
+    __metadata("design:type", String)
+], TimelineCardComponent.prototype, "dateFormat", void 0);
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["O" /* Input */])(),
+    __metadata("design:type", Boolean)
+], TimelineCardComponent.prototype, "disabled", void 0);
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["O" /* Input */])(),
+    __metadata("design:type", Boolean)
+], TimelineCardComponent.prototype, "showContent", void 0);
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_15" /* ViewChild */])('timelineWrapper'),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ElementRef */]) === "function" && _a || Object)
+], TimelineCardComponent.prototype, "timelineWrapper", void 0);
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_15" /* ViewChild */])('eventsWrapper'),
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ElementRef */]) === "function" && _b || Object)
+], TimelineCardComponent.prototype, "eventsWrapper", void 0);
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_15" /* ViewChild */])('fillingLine'),
+    __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ElementRef */]) === "function" && _c || Object)
+], TimelineCardComponent.prototype, "fillingLine", void 0);
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_15" /* ViewChild */])('eventsContent'),
+    __metadata("design:type", typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ElementRef */]) === "function" && _d || Object)
+], TimelineCardComponent.prototype, "eventsContent", void 0);
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_18" /* ViewChildren */])('timelineEvents'),
+    __metadata("design:type", typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["_19" /* QueryList */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["_19" /* QueryList */]) === "function" && _e || Object)
+], TimelineCardComponent.prototype, "timelineEvents", void 0);
+TimelineCardComponent = TimelineCardComponent_1 = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
         selector: 'app-timeline-card',
         template: __webpack_require__("../../../../../src/app/timeline-card/timeline-card.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/timeline-card/timeline-card.component.css")]
+        styles: [__webpack_require__("../../../../../src/app/timeline-card/timeline-card.component.css")],
+        animations: [
+            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_20" /* trigger */])('contentState', [
+                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_21" /* state */])('active', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_22" /* style */])({
+                    position: 'relative', 'z-index': 2, opacity: 1,
+                })),
+                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_23" /* transition */])('right => active', [
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_22" /* style */])({
+                        transform: 'translateX(100%)'
+                    }),
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_24" /* animate */])('400ms ease-in-out', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_25" /* keyframes */])([
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_22" /* style */])({ opacity: 0, transform: 'translateX(100%)', offset: 0 }),
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_22" /* style */])({ opacity: 1, transform: 'translateX(0%)', offset: 1.0 })
+                    ]))
+                ]),
+                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_23" /* transition */])('active => right', [
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_22" /* style */])({
+                        transform: 'translateX(-100%)'
+                    }),
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_24" /* animate */])('400ms ease-in-out', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_25" /* keyframes */])([
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_22" /* style */])({ opacity: 1, transform: 'translateX(0%)', offset: 0 }),
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_22" /* style */])({ opacity: 0, transform: 'translateX(100%)', offset: 1.0 })
+                    ]))
+                ]),
+                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_23" /* transition */])('active => left', [
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_22" /* style */])({
+                        transform: 'translateX(-100%)'
+                    }),
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_24" /* animate */])('400ms ease-in-out', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_25" /* keyframes */])([
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_22" /* style */])({ opacity: 1, transform: 'translateX(0%)', offset: 0 }),
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_22" /* style */])({ opacity: 0, transform: 'translateX(-100%)', offset: 1.0 })
+                    ]))
+                ]),
+                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_23" /* transition */])('left => active', [
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_22" /* style */])({
+                        transform: 'translateX(100%)'
+                    }),
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_24" /* animate */])('400ms ease-in-out', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_25" /* keyframes */])([
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_22" /* style */])({ opacity: 0, transform: 'translateX(-100%)', offset: 0 }),
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_22" /* style */])({ opacity: 1, transform: 'translateX(0%)', offset: 1.0 })
+                    ]))
+                ]),
+            ])
+        ]
     }),
     __metadata("design:paramtypes", [])
 ], TimelineCardComponent);
 
+var TimelineCardComponent_1, _a, _b, _c, _d, _e;
 //# sourceMappingURL=timeline-card.component.js.map
 
 /***/ }),
@@ -691,7 +976,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/timeline-holder/timeline-holder.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  timeline-holder works!\n</p>\n"
+module.exports = "<div class=\"panel panel-default\">\n  <div class=\"panel-heading\">Antarika </div>\n  <div class=\"panel-body\">\n    <app-timeline-card [timelineElements]=\"timeline\" [showContent]=\"showTimeLine\"></app-timeline-card>\n  </div>\n</div>\n<div class=\"panel panel-default\">\n  <div class=\"panel-heading\">Amit</div>\n  <div class=\"panel-body\">\n    <app-timeline-card [timelineElements]=\"timeline_2\" [showContent]=\"showTimeLine\"></app-timeline-card>\n  </div>\n</div>\n\n\n\n"
 
 /***/ }),
 
@@ -700,6 +985,7 @@ module.exports = "<p>\n  timeline-holder works!\n</p>\n"
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ConfigurationService__ = __webpack_require__("../../../../../src/app/ConfigurationService.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TimelineHolderComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -711,10 +997,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var TimelineHolderComponent = (function () {
-    function TimelineHolderComponent() {
+    function TimelineHolderComponent(_ConfigurationService) {
+        var _this = this;
+        this._ConfigurationService = _ConfigurationService;
+        this.showTimeLine = true;
+        console.log('constructor');
+        this._ConfigurationService.getLayoutData('/assets/data/antarika-timeline.json').subscribe(function (res) {
+            res.forEach(function (value, index, array) {
+                array[index]['date'] = new Date(value['date']);
+            });
+            _this.timeline = res;
+        });
+        this._ConfigurationService.getLayoutData('/assets/data/amit-timeline.json').subscribe(function (res) {
+            res.forEach(function (value, index, array) {
+                array[index]['date'] = new Date(value['date']);
+            });
+            _this.timeline_2 = res;
+        });
     }
     TimelineHolderComponent.prototype.ngOnInit = function () {
+        console.log('on init');
     };
     return TimelineHolderComponent;
 }());
@@ -724,9 +1028,10 @@ TimelineHolderComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/timeline-holder/timeline-holder.component.html"),
         styles: [__webpack_require__("../../../../../src/app/timeline-holder/timeline-holder.component.css")]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__ConfigurationService__["a" /* ConfigurationService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__ConfigurationService__["a" /* ConfigurationService */]) === "function" && _a || Object])
 ], TimelineHolderComponent);
 
+var _a;
 //# sourceMappingURL=timeline-holder.component.js.map
 
 /***/ }),
