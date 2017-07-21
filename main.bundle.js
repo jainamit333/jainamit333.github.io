@@ -72,7 +72,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "body{\n  -ms-flex-line-pack: center;\n      align-content: center;\n}\ni{\n  cursor: pointer ;\n}\ni span{\n  color: black;\n}\n\n\n\n", ""]);
+exports.push([module.i, "body{\n  background: url(//subtlepatterns.com/patterns/scribble_light.png);\n  -ms-flex-line-pack: center;\n      align-content: center;\n}\ni{\n  cursor: pointer ;\n}\ni span{\n  color: black;\n}\n\n\n\n", ""]);
 
 // exports
 
@@ -153,6 +153,7 @@ var _a;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__welcome_welcome_component__ = __webpack_require__("../../../../../src/app/welcome/welcome.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__gallery_holder_gallery_holder_component__ = __webpack_require__("../../../../../src/app/gallery-holder/gallery-holder.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__contact_holder_contact_holder_component__ = __webpack_require__("../../../../../src/app/contact-holder/contact-holder.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__image_card_image_card_component__ = __webpack_require__("../../../../../src/app/image-card/image-card.component.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -160,6 +161,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -203,7 +205,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_15__timeline_holder_timeline_holder_component__["a" /* TimelineHolderComponent */],
             __WEBPACK_IMPORTED_MODULE_16__welcome_welcome_component__["a" /* WelcomeComponent */],
             __WEBPACK_IMPORTED_MODULE_17__gallery_holder_gallery_holder_component__["a" /* GalleryHolderComponent */],
-            __WEBPACK_IMPORTED_MODULE_18__contact_holder_contact_holder_component__["a" /* ContactHolderComponent */]
+            __WEBPACK_IMPORTED_MODULE_18__contact_holder_contact_holder_component__["a" /* ContactHolderComponent */],
+            __WEBPACK_IMPORTED_MODULE_19__image_card_image_card_component__["a" /* ImageCardComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -295,7 +298,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "@font-face{font-family:'Calluna';\n  src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/callunasansregular-webfont.woff') format('woff');\n}\n.columns {\n  -webkit-column-width: 200px;\n          column-width: 200px;\n  -webkit-column-gap: 15px;\n          column-gap: 15px;\n  width: 90%;\n  max-width: 1100px;\n  margin: 50px auto;\n}\n\n", ""]);
 
 // exports
 
@@ -308,7 +311,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/gallery-holder/gallery-holder.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  gallery-holder works!\n</p>\n"
+module.exports = "<div class=\"columns\">\n  <app-image-card *ngFor = \"let data of gallery \" dataPath=\"{{ data.dataPath }}\" text=\"{{ data.text }}\"></app-image-card>\n</div>\n"
 
 /***/ }),
 
@@ -317,6 +320,7 @@ module.exports = "<p>\n  gallery-holder works!\n</p>\n"
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ConfigurationService__ = __webpack_require__("../../../../../src/app/ConfigurationService.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GalleryHolderComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -328,10 +332,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var GalleryHolderComponent = (function () {
-    function GalleryHolderComponent() {
+    function GalleryHolderComponent(_ConfigurationService) {
+        this._ConfigurationService = _ConfigurationService;
     }
     GalleryHolderComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this._ConfigurationService.getLayoutData('/assets/data/gallery.json').subscribe(function (res) {
+            _this.gallery = res;
+        });
     };
     return GalleryHolderComponent;
 }());
@@ -341,10 +351,80 @@ GalleryHolderComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/gallery-holder/gallery-holder.component.html"),
         styles: [__webpack_require__("../../../../../src/app/gallery-holder/gallery-holder.component.css")]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__ConfigurationService__["a" /* ConfigurationService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__ConfigurationService__["a" /* ConfigurationService */]) === "function" && _a || Object])
 ], GalleryHolderComponent);
 
+var _a;
 //# sourceMappingURL=gallery-holder.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/image-card/image-card.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "@font-face{font-family:'Calluna';\n  src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/callunasansregular-webfont.woff') format('woff');\n}\n\n figure {\n  background: #fefefe;\n  border: 2px solid #fcfcfc;\n  box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);\n  margin: 0 2px 15px;\n  padding: 15px;\n  padding-bottom: 10px;\n  transition: opacity .4s ease-in-out;\n  display: inline-block;\n  column-break-inside: avoid;\n   border-radius: 3px;\n}\n\n figure img {\n  width: 100%; height: auto;\n  border-bottom: 1px solid #ccc;\n  padding-bottom: 15px;\n  margin-bottom: 5px;\n   border-radius: 3px;\n}\n\n figure figcaption {\n  font-size: .9rem;\n  color: #444;\n  line-height: 1.5;\n}\n\n small {\n  font-size: 1rem;\n  float: right;\n  text-transform: uppercase;\n  color: #aaa;\n}\n\n small a {\n  color: #666;\n  text-decoration: none;\n  transition: .4s color;\n}\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/image-card/image-card.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\n  <figure>\n    <img src=\"{{dataPath}}\">\n    <figcaption>{{ text }}</figcaption>\n  </figure>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/image-card/image-card.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ImageCardComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ImageCardComponent = (function () {
+    function ImageCardComponent() {
+    }
+    ImageCardComponent.prototype.ngOnInit = function () {
+    };
+    return ImageCardComponent;
+}());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["O" /* Input */])(),
+    __metadata("design:type", String)
+], ImageCardComponent.prototype, "dataPath", void 0);
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["O" /* Input */])(),
+    __metadata("design:type", String)
+], ImageCardComponent.prototype, "text", void 0);
+ImageCardComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
+        selector: 'app-image-card',
+        template: __webpack_require__("../../../../../src/app/image-card/image-card.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/image-card/image-card.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], ImageCardComponent);
+
+//# sourceMappingURL=image-card.component.js.map
 
 /***/ }),
 
