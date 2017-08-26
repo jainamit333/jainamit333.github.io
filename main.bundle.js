@@ -55,7 +55,7 @@ var ConfigurationService = (function () {
     return ConfigurationService;
 }());
 ConfigurationService = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["c" /* Injectable */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* Http */]) === "function" && _a || Object])
 ], ConfigurationService);
 
@@ -72,7 +72,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "body{\n  background: url(//subtlepatterns.com/patterns/scribble_light.png);\n  -ms-flex-line-pack: center;\n      align-content: center;\n}\ni{\n  cursor: pointer ;\n}\ni span{\n  color: black;\n}\n\n\n\n", ""]);
+exports.push([module.i, "body{\n  background: url(//subtlepatterns.com/patterns/scribble_light.png);\n  -ms-flex-line-pack: center;\n      align-content: center;\n}\ni{\n  cursor: pointer ;\n}\ni span{\n  color: black;\n}\n.custom-container{\n  margin: 7px;\n}\n\n\n", ""]);
 
 // exports
 
@@ -85,7 +85,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<app-menu-bar></app-menu-bar>\n\n<div class=\"container\">\n  <router-outlet></router-outlet>\n</div>\n"
+module.exports = "\n<app-menu-bar></app-menu-bar>\n\n<div class=\"custom-container\">\n  <router-outlet></router-outlet>\n</div>\n"
 
 /***/ }),
 
@@ -116,7 +116,7 @@ var AppComponent = (function () {
     return AppComponent;
 }());
 AppComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-root',
         template: __webpack_require__("../../../../../src/app/app.component.html"),
         styles: [__webpack_require__("../../../../../src/app/app.component.css")]
@@ -154,6 +154,14 @@ var _a;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__gallery_holder_gallery_holder_component__ = __webpack_require__("../../../../../src/app/gallery-holder/gallery-holder.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__contact_holder_contact_holder_component__ = __webpack_require__("../../../../../src/app/contact-holder/contact-holder.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__image_card_image_card_component__ = __webpack_require__("../../../../../src/app/image-card/image-card.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__event_card_event_card_component__ = __webpack_require__("../../../../../src/app/event-card/event-card.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__events_holder_events_holder_component__ = __webpack_require__("../../../../../src/app/events-holder/events-holder.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_ngx_bootstrap_carousel__ = __webpack_require__("../../../../ngx-bootstrap/carousel/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23_ngx_slick__ = __webpack_require__("../../../../ngx-slick/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24_ngx_swiper_wrapper__ = __webpack_require__("../../../../ngx-swiper-wrapper/dist/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24_ngx_swiper_wrapper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_24_ngx_swiper_wrapper__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__profile_card_left_profile_card_left_component__ = __webpack_require__("../../../../../src/app/profile-card-left/profile-card-left.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__profile_card_right_profile_card_right_component__ = __webpack_require__("../../../../../src/app/profile-card-right/profile-card-right.component.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -181,20 +189,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
+
+
+
+
+
 var appRoutes = [
-    { path: 'portfolio', component: __WEBPACK_IMPORTED_MODULE_14__porfolio_holder_porfolio_holder_component__["a" /* PorfolioHolderComponent */] },
+    // { path: 'portfolio', component: PorfolioHolderComponent },
     { path: 'timeline', component: __WEBPACK_IMPORTED_MODULE_15__timeline_holder_timeline_holder_component__["a" /* TimelineHolderComponent */] },
     { path: 'gallery', component: __WEBPACK_IMPORTED_MODULE_17__gallery_holder_gallery_holder_component__["a" /* GalleryHolderComponent */] },
-    { path: 'contact', component: __WEBPACK_IMPORTED_MODULE_18__contact_holder_contact_holder_component__["a" /* ContactHolderComponent */] },
+    // { path: 'contact', component: ContactHolderComponent },
     { path: '', component: __WEBPACK_IMPORTED_MODULE_16__welcome_welcome_component__["a" /* WelcomeComponent */] }
 ];
+var SWIPER_CONFIG = {
+    direction: 'horizontal',
+    slidesPerView: 'auto',
+    keyboardControl: true
+};
 var AppModule = (function () {
     function AppModule() {
     }
     return AppModule;
 }());
 AppModule = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["b" /* NgModule */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
         declarations: [
             __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */],
             __WEBPACK_IMPORTED_MODULE_5__settings_settings_component__["a" /* SettingsComponent */],
@@ -206,7 +226,11 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_16__welcome_welcome_component__["a" /* WelcomeComponent */],
             __WEBPACK_IMPORTED_MODULE_17__gallery_holder_gallery_holder_component__["a" /* GalleryHolderComponent */],
             __WEBPACK_IMPORTED_MODULE_18__contact_holder_contact_holder_component__["a" /* ContactHolderComponent */],
-            __WEBPACK_IMPORTED_MODULE_19__image_card_image_card_component__["a" /* ImageCardComponent */]
+            __WEBPACK_IMPORTED_MODULE_19__image_card_image_card_component__["a" /* ImageCardComponent */],
+            __WEBPACK_IMPORTED_MODULE_20__event_card_event_card_component__["a" /* EventCardComponent */],
+            __WEBPACK_IMPORTED_MODULE_21__events_holder_events_holder_component__["a" /* EventsHolderComponent */],
+            __WEBPACK_IMPORTED_MODULE_25__profile_card_left_profile_card_left_component__["a" /* ProfileCardLeftComponent */],
+            __WEBPACK_IMPORTED_MODULE_26__profile_card_right_profile_card_right_component__["a" /* ProfileCardRightComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -218,7 +242,10 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_8__angular_material__["e" /* MdIconModule */],
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_router__["a" /* RouterModule */].forRoot(appRoutes, { enableTracing: true })
+            __WEBPACK_IMPORTED_MODULE_6__angular_router__["a" /* RouterModule */].forRoot(appRoutes, { enableTracing: true }),
+            __WEBPACK_IMPORTED_MODULE_23_ngx_slick__["a" /* SlickModule */].forRoot(),
+            __WEBPACK_IMPORTED_MODULE_24_ngx_swiper_wrapper__["SwiperModule"].forRoot(SWIPER_CONFIG),
+            __WEBPACK_IMPORTED_MODULE_22_ngx_bootstrap_carousel__["a" /* CarouselModule */].forRoot()
         ],
         providers: [__WEBPACK_IMPORTED_MODULE_9__ConfigurationService__["a" /* ConfigurationService */]],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
@@ -278,7 +305,7 @@ var ContactHolderComponent = (function () {
     return ContactHolderComponent;
 }());
 ContactHolderComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-contact-holder',
         template: __webpack_require__("../../../../../src/app/contact-holder/contact-holder.component.html"),
         styles: [__webpack_require__("../../../../../src/app/contact-holder/contact-holder.component.css")]
@@ -290,6 +317,141 @@ ContactHolderComponent = __decorate([
 
 /***/ }),
 
+/***/ "../../../../../src/app/event-card/event-card.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n  <div class=\"header\">\n    <div class=\"color-overlay\">\n      <div class=\"day-number\">{{ mainEvent.day.date}}</div>\n      <div class=\"date-right\">\n        <div class=\"day-name\">{{ mainEvent.day.day}}</div>\n        <div class=\"month\">{{ mainEvent.day.month}} {{ mainEvent.day.year}}</div>\n      </div>\n      <h3>{{mainEvent.name}}</h3>\n      <h6>{{mainEvent.description}}</h6>\n    </div>\n    <!--<div class=\"actionbutton\">+</div>-->\n  </div>\n  <div class=\"timeline\">\n    <ul>\n      <li *ngFor  =\"let data of mainEvent.timeline \">\n        <div class=\"bullet pink\"></div>\n        <div class=\"time\">{{ data.time}}</div>\n        <div class=\"desc\">\n          <h3>{{ data.name }}</h3>\n          <h4>{{ data.description }}</h4>\n          <div class=\"people\">\n            <img *ngFor = \"let people of data.images \" src=\"{{ people }}\">\n          </div>\n        </div>\n      </li>\n    </ul>\n  </div>\n</div>\n\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/event-card/event-card.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".container {\n  max-width: 31.3333em;\n  height: 47.999995em;\n  box-shadow: 0 0 40px #d3d2d2;\n  font-family: 'Open Sans', sans-serif;\n  font-weight: bold; }\n\n.navbar {\n  background: #B97CFC;\n  color: #fff;\n  padding: 1em 0.5em; }\n  .navbar a {\n    color: #fff;\n    text-decoration: none;\n    font-size: 1.3em;\n    float: left; }\n  .navbar span {\n    font-size: 1.1em;\n    font-weight: 300;\n    display: block;\n    text-align: center; }\n\n.profile-pic {\n  width: 30px;\n  height: 30px;\n  display: inline-block;\n  float: right;\n  position: relative; }\n  .profile-pic img {\n    width: 100%;\n    border-radius: 50%; }\n\n.notification {\n  position: absolute;\n  width: 5px;\n  height: 5px;\n  border-radius: 50%;\n  top: 2px;\n  right: 2px;\n  background: #F93B69; }\n\n.header {\n  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRos2b8bgiSNlzt56YVM0kzvKb9j4X8p6sVeZDlHC-36LqyECqBQw);\n  background-size: cover;\n  color: #fff;\n  position: relative;\n  width: 108%;\n  padding: -10px;\n  margin: -15px; }\n\n.color-overlay {\n  padding: 3em 2em;\n  box-sizing: border-box;\n  background: rgba(123, 94, 155, 0.5); }\n\n.actionbutton {\n  position: absolute;\n  background: darkgreen;\n  width: 50px;\n  height: 50px;\n  font-size: 3em;\n  font-weight: 300;\n  border-radius: 50%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  bottom: -25px;\n  right: 20px;\n  box-shadow: 0 0 8px #202020; }\n\n.day-number {\n  font-size: 4em;\n  display: inline-block;\n  margin-right: 15px; }\n\n.date-right {\n  display: inline-block; }\n\n.day-name {\n  font-size: 1.6em; }\n\n.month {\n  text-transform: uppercase;\n  font-weight: 300;\n  font-size: 0.6em;\n  letter-spacing: 2px;\n  margin-top: 2px; }\n\n.timeline ul {\n  padding: 1em 0 0 2em;\n  margin: 0;\n  list-style: none;\n  position: relative; }\n  .timeline ul::before {\n    content: ' ';\n    height: 100%;\n    width: 1px;\n    background-color: #d9d9d9;\n    position: absolute;\n    top: 0;\n    left: 2.5em;\n    z-index: -1; }\n\n.timeline li div {\n  display: inline-block;\n  margin: 1em 0;\n  vertical-align: top; }\n\n.timeline .bullet {\n  width: 1em;\n  height: 1em;\n  box-sizing: border-box;\n  border-radius: 50%;\n  background: #fff;\n  z-index: 1;\n  margin-right: 1em; }\n  .timeline .bullet.pink {\n    border: 2px solid #F93B69; }\n  .timeline .bullet.green {\n    border: 2px solid #B0E8E2; }\n  .timeline .bullet.orange {\n    border: 2px solid #EB8B6E; }\n\n.timeline .time {\n  width: 20%;\n  font-size: 0.75em;\n  padding-top: 0.25em; }\n\n.timeline .desc {\n  width: 50%; }\n\n.timeline h3 {\n  font-size: 0.9em;\n  font-weight: 400;\n  margin: 0; }\n\n.timeline h4 {\n  margin: 0;\n  font-size: 0.7em;\n  font-weight: 400;\n  color: darkgrey; }\n\n.timeline .people img {\n  width: 42px;\n  height: 42px;\n  margin: 1px;\n  border-radius: 50%; }\n\n.credits, .video {\n  position: absolute;\n  bottom: 10px;\n  color: #808080;\n  font-size: 100%;\n  text-decoration: underline; }\n\n.credits {\n  left: 10px; }\n\n.video {\n  right: 10px; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/event-card/event-card.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventCardComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var EventCardComponent = (function () {
+    function EventCardComponent() {
+        this.mainEvent = {};
+    }
+    EventCardComponent.prototype.ngOnInit = function () {
+    };
+    return EventCardComponent;
+}());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", Object)
+], EventCardComponent.prototype, "mainEvent", void 0);
+EventCardComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-event-card',
+        template: __webpack_require__("../../../../../src/app/event-card/event-card.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/event-card/event-card.component.scss")]
+    }),
+    __metadata("design:paramtypes", [])
+], EventCardComponent);
+
+//# sourceMappingURL=event-card.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/events-holder/events-holder.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div id=\"content\">\n  <div class=\"content-inner\">\n\n    <a href=\"#\" am-metro-box=\"row=3 col=2 azul2\" style=\"overflow-y: scroll\">\n      <app-event-card [mainEvent]=\"mainEvent\"></app-event-card>\n    </a>\n\n    <a href=\"#\" am-metro-box=\"row=1 col=2 verde1\">\n\n    </a>\n\n    <a href=\"#\" am-metro-box=\"row=1 col=2 verde1\">\n      <div>\n        <span>conteudo</span>\n      </div>\n    </a>\n\n    <a href=\"#\" am-metro-box=\"row=1 col=4 azul2\">\n      <div class=\"panner\">\n        <app-profile-card-left></app-profile-card-left>\n        <app-profile-card-right></app-profile-card-right>\n      </div>\n    </a>\n\n    <a href=\"#\" am-metro-box=\"row=1 col=2 azul2\">\n      <div>\n        <span>col=1 and row=2</span>\n      </div>\n    </a>\n\n    <a href=\"#\" am-metro-box=\"row=1 col=1 verde2\">\n      <div class=\"carousel slide\" data-ride=\"carousel\" data-interval=\"1000\">\n        <!-- Wrapper for slides -->\n        <div class=\"carousel-inner\">\n          <div class=\"item active\">\n            <img src=\"http://res.cloudinary.com/dhuynu1ka/image/upload/v1500629369/MomentCam_20170715_214018_oemkjx.jpg\" class=\"img-responsive\"/>\n          </div>\n          <div class=\"item\">\n            <img src=\"http://res.cloudinary.com/dhuynu1ka/image/upload/v1500629370/MomentCam_20170715_214250_rwudt6.jpg\" class=\"img-responsive\"/>\n          </div>\n          \n        </div>\n      </div>\n\n    </a>\n\n    <a href=\"#\" am-metro-box=\"row=1 col=1 verde2\">\n      <div class=\"carousel slide\" data-ride=\"carousel\" data-interval=\"1200\">\n        <!-- Wrapper for slides -->\n        <div class=\"carousel-inner\">\n          <div class=\"item active\">\n            <img src=\"http://res.cloudinary.com/dhuynu1ka/image/upload/v1500629370/MomentCam_20170715_214342_oxo3gr.jpg\" class=\"img-responsive\"/>\n          </div>\n\n          <div class=\"item\">\n            <img src=\"http://res.cloudinary.com/dhuynu1ka/image/upload/v1500629369/MomentCam_20170715_214242_tpxv4k.jpg\" class=\"img-responsive\"/>\n          </div>\n\n        </div>\n      </div>\n    </a>\n\n\n  </div>\n</div>\n\n\n\n\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/events-holder/events-holder.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "#content {\n  width: 100em;\n  margin: auto;\n  /*display: box; // fallback for older browsers\n  display: flexbox; // fallback for IE10\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-between;\n  align-items: flex-start;*/ }\n\n#content:after {\n  content: \"\";\n  clear: both;\n  display: block; }\n\n#content .content-inner {\n  margin-left: -2em; }\n\n[am-metro-box] {\n  overflow: hidden;\n  font-family: Verdana;\n  background-color: #ECF0F1;\n  width: 14.66667em;\n  padding-bottom: 14.66667em;\n  position: relative;\n  margin-bottom: 2em;\n  margin-left: 2em;\n  transition: all .3s linear;\n  float: left; }\n\n[am-metro-box] div {\n  position: absolute;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0; }\n\n[am-metro-box~=\"row=3\"] {\n  padding-bottom: 0.0em; }\n\n[am-metro-box~=\"row=2\"] {\n  padding-bottom: 31.33333em; }\n\n[am-metro-box~=\"col=2\"] {\n  width: 31.33333em; }\n\n[am-metro-box~=\"col=3\"] {\n  width: 48em; }\n\n[am-metro-box~=\"col=4\"] {\n  width: 64.66667em; }\n\n[am-metro-box]:hover {\n  background-color: lightgreen; }\n\n[am-metro-box~=\"blue\"] {\n  background-color: #1488C8; }\n\n[am-metro-box~=\"blue\"]:hover {\n  background-color: #26a4e9; }\n\n[am-metro-box~=\"yellow\"] {\n  background-color: #F7E041; }\n\n[am-metro-box~=\"yellow\"]:hover {\n  background-color: #f9e872; }\n\n[am-metro-box] div span {\n  color: #32252F; }\n\n[am-metro-box~=\"blue\"] div span {\n  color: #f2f2f2; }\n\n[am-metro-box~=\"yellow\"] div span {\n  color: #4d4d4d; }\n\n[am-metro-box~=\"branco\"] {\n  background: #ffffff; }\n\n[am-metro-box~=\"azul1\"] {\n  background: white; }\n\n[am-metro-box~=\"azul2\"] {\n  background: #92d8ad; }\n\n[am-metro-box~=\"azul3\"] {\n  background: #0060AE; }\n\n[am-metro-box~=\"verde1\"] {\n  background: #91CE18; }\n\n[am-metro-box~=\"verde2\"] {\n  background: #A6CE39; }\n\n[am-metro-box~=\"verde3\"] {\n  background: #00A648; }\n\n[am-metro-box~=\"verde4\"] {\n  background: #7DC242; }\n\n[am-metro-box~=\"amarelo1\"] {\n  background: #FFCA00; }\n\n[am-metro-box~=\"amarelo2\"] {\n  background: #FFCB05; }\n\n[am-metro-box~=\"laranja1\"] {\n  background: #F58220; }\n\n[am-metro-box~=\"vermelho1\"] {\n  background: #FF141E; }\n\n[am-metro-box~=\"lilas1\"] {\n  background: #BC1C91; }\n\n.panner app-profile-card-left {\n  position: absolute;\n  left: 10px; }\n\n.panner app-profile-card-right {\n  position: absolute;\n  right: 10px; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/events-holder/events-holder.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ConfigurationService__ = __webpack_require__("../../../../../src/app/ConfigurationService.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventsHolderComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var EventsHolderComponent = (function () {
+    function EventsHolderComponent(_ConfigurationService) {
+        var _this = this;
+        this._ConfigurationService = _ConfigurationService;
+        this._ConfigurationService.getLayoutData('/assets/data/main-event.json').subscribe(function (res) {
+            _this.mainEvent = res;
+        });
+    }
+    EventsHolderComponent.prototype.ngOnInit = function () {
+    };
+    return EventsHolderComponent;
+}());
+EventsHolderComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-events-holder',
+        template: __webpack_require__("../../../../../src/app/events-holder/events-holder.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/events-holder/events-holder.component.scss")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__ConfigurationService__["a" /* ConfigurationService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__ConfigurationService__["a" /* ConfigurationService */]) === "function" && _a || Object])
+], EventsHolderComponent);
+
+var _a;
+//# sourceMappingURL=events-holder.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/gallery-holder/gallery-holder.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -298,7 +460,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "@font-face{font-family:'Calluna';\n  src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/callunasansregular-webfont.woff') format('woff');\n}\n.columns {\n  -webkit-column-width: 200px;\n          column-width: 200px;\n  -webkit-column-gap: 15px;\n          column-gap: 15px;\n  width: 90%;\n  max-width: 1100px;\n  margin: 50px auto;\n}\n\n", ""]);
+exports.push([module.i, "@font-face{font-family:'Calluna';\n  src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/callunasansregular-webfont.woff') format('woff');\n}\n.columns {\n  -webkit-column-width: 230px;\n          column-width: 230px;\n  -webkit-column-gap: 10px;\n          column-gap: 10px;\n  width: 90%;\n  max-width: 1100px;\n  margin: 40px auto;\n}\n\n", ""]);
 
 // exports
 
@@ -346,7 +508,7 @@ var GalleryHolderComponent = (function () {
     return GalleryHolderComponent;
 }());
 GalleryHolderComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-gallery-holder',
         template: __webpack_require__("../../../../../src/app/gallery-holder/gallery-holder.component.html"),
         styles: [__webpack_require__("../../../../../src/app/gallery-holder/gallery-holder.component.css")]
@@ -408,15 +570,15 @@ var ImageCardComponent = (function () {
     return ImageCardComponent;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["O" /* Input */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
     __metadata("design:type", String)
 ], ImageCardComponent.prototype, "dataPath", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["O" /* Input */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
     __metadata("design:type", String)
 ], ImageCardComponent.prototype, "text", void 0);
 ImageCardComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-image-card',
         template: __webpack_require__("../../../../../src/app/image-card/image-card.component.html"),
         styles: [__webpack_require__("../../../../../src/app/image-card/image-card.component.css")]
@@ -449,7 +611,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/menu-bar/menu-bar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header>\n  <nav class=\"cd-stretchy-nav \" [ngClass]=\"{'nav-is-visible': menuExtended}\">\n    <a class=\"cd-nav-trigger\"  (click)=\"toggleMenu()\">\n      Menu\n      <span aria-hidden=\"true\"></span>\n    </a>\n\n    <ul>\n      <li><a href=\"#0\" routerLink=\"/\" class=\"active\"><span class=\"menu-text hidden-xs\">Home</span></a></li>\n      <li><a href=\"#0\" routerLink=\"portfolio\"><span class=\"menu-text hidden-xs\">Portfolio</span></a></li>\n      <li><a href=\"#0\" routerLink=\"timeline\"><span class=\"menu-text hidden-xs\">Timeline</span></a></li>\n      <li><a href=\"#0\" routerLink=\"gallery\"><span class=\"menu-text hidden-xs\">Gallery</span></a></li>\n      <li><a href=\"#0\" routerLink=\"contact\"><span class=\"menu-text hidden-xs\">Contact</span></a></li>\n\n    </ul>\n\n    <span aria-hidden=\"true\" class=\"stretchy-nav-bg\"></span>\n  </nav>\n</header>\n"
+module.exports = "<header>\n  <nav class=\"cd-stretchy-nav \" [ngClass]=\"{'nav-is-visible': menuExtended}\">\n    <a class=\"cd-nav-trigger\"  (click)=\"toggleMenu()\">\n      Menu\n      <span aria-hidden=\"true\"></span>\n    </a>\n\n    <ul>\n      <li><a href=\"#0\" routerLink=\"/\" class=\"active\"><span class=\"menu-text hidden-xs\">Home</span></a></li>\n      <!--<li><a href=\"#0\" routerLink=\"portfolio\"><span class=\"menu-text hidden-xs\">Portfolio</span></a></li>-->\n      <li><a href=\"#0\" routerLink=\"timeline\"><span class=\"menu-text hidden-xs\">Timeline</span></a></li>\n      <li><a href=\"#0\" routerLink=\"gallery\"><span class=\"menu-text hidden-xs\">Gallery</span></a></li>\n      <!--<li><a href=\"#0\" routerLink=\"contact\"><span class=\"menu-text hidden-xs\">Contact</span></a></li>-->\n\n    </ul>\n\n    <span aria-hidden=\"true\" class=\"stretchy-nav-bg\"></span>\n  </nav>\n</header>\n"
 
 /***/ }),
 
@@ -481,7 +643,7 @@ var MenuBarComponent = (function () {
     return MenuBarComponent;
 }());
 MenuBarComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-menu-bar',
         template: __webpack_require__("../../../../../src/app/menu-bar/menu-bar.component.html"),
         styles: [__webpack_require__("../../../../../src/app/menu-bar/menu-bar.component.css")]
@@ -514,7 +676,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/porfolio-card/porfolio-card.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<md-card [ngClass]=\"[data.color , data.large_col, data.small_col, data.extra_small]\">\n  <md-card-header>\n    <img md-card-avatar src=\"{{ data.avatar}}\">\n    <md-card-title>{{data.title }}</md-card-title>\n    <md-card-subtitle>{{ data.description }}</md-card-subtitle>\n  </md-card-header>\n  <img md-card-image src=\"{{ data.image}}\" class=\"md-card-image\">\n  <md-card-content>\n    <p>{{ data.content }} </p>\n  </md-card-content>\n  <md-card-footer >\n    <i *ngFor=\" let action of data.actions\" class=\"material-icons\">{{action}}</i>\n  </md-card-footer>\n</md-card>\n"
+module.exports = "\n<md-card *ngIf=\"data\" [ngClass]=\"[data.color , data.large_col, data.small_col, data.extra_small]\">\n  <md-card-header>\n    <img md-card-avatar src=\"{{ data.avatar}}\">\n    <md-card-title>{{data.title }}</md-card-title>\n    <md-card-subtitle>{{ data.description }}</md-card-subtitle>\n  </md-card-header>\n  <img md-card-image src=\"{{ data.image}}\" class=\"md-card-image\">\n  <md-card-content>\n    <p>{{ data.content }} </p>\n  </md-card-content>\n  <md-card-footer >\n    <i *ngFor=\" let action of data.actions\" class=\"material-icons\">{{action}}</i>\n  </md-card-footer>\n</md-card>\n"
 
 /***/ }),
 
@@ -549,11 +711,11 @@ var PorfolioCardComponent = (function () {
     return PorfolioCardComponent;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["O" /* Input */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
     __metadata("design:type", String)
 ], PorfolioCardComponent.prototype, "dataPath", void 0);
 PorfolioCardComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-porfolio-card',
         template: __webpack_require__("../../../../../src/app/porfolio-card/porfolio-card.component.html"),
         styles: [__webpack_require__("../../../../../src/app/porfolio-card/porfolio-card.component.css")]
@@ -587,7 +749,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/porfolio-holder/porfolio-holder.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n\n  <app-porfolio-card dataPath=\"/assets/data/antarika-portfolio.json\"></app-porfolio-card>\n  <app-porfolio-card dataPath=\"/assets/data/amit-portfolio.json\"></app-porfolio-card>\n</div>\n"
+module.exports = "<div class=\"container-fluid\">\n\n  <app-porfolio-card dataPath=\"/assets/data/antarika-portfolio.json\"></app-porfolio-card>\n  <app-porfolio-card dataPath=\"/assets/data/amit-portfolio.json\"></app-porfolio-card>\n</div>\n"
 
 /***/ }),
 
@@ -615,7 +777,7 @@ var PorfolioHolderComponent = (function () {
     return PorfolioHolderComponent;
 }());
 PorfolioHolderComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-porfolio-holder',
         template: __webpack_require__("../../../../../src/app/porfolio-holder/porfolio-holder.component.html"),
         styles: [__webpack_require__("../../../../../src/app/porfolio-holder/porfolio-holder.component.css")]
@@ -624,6 +786,132 @@ PorfolioHolderComponent = __decorate([
 ], PorfolioHolderComponent);
 
 //# sourceMappingURL=porfolio-holder.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/profile-card-left/profile-card-left.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Montserrat);", ""]);
+exports.push([module.i, "@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);", ""]);
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Open+Sans);", ""]);
+
+// module
+exports.push([module.i, ".snip1506 {\n  font-family: 'Open Sans', Arial, sans-serif;\n  position: relative;\n  float: left;\n  margin: 10px 1%;\n  min-width: 230px;\n  max-width: 315px;\n  width: 100%;\n  color: #141414;\n  text-align: left;\n  line-height: 1.4em;\n  font-size: 14px;\n  box-shadow: none !important;\n}\n.snip1506 * {\n  box-sizing: border-box;\n}\n.snip1506 .profile-image {\n  width: 26%;\n}\n.snip1506 .profile-image img {\n  border-radius: 5px;\n  max-width: 100%;\n  vertical-align: top;\n}\n.snip1506 .profile-image,\n.snip1506 figcaption {\n  float: left;\n}\n.snip1506 figcaption {\n  width: 70%;\n  background-color: #333333;\n  color: #fff;\n  padding: 25px;\n  display: inline-block;\n  margin-left: 4%;\n  border-radius: 5px;\n}\n.snip1506 figcaption:after {\n  content: '';\n  position: absolute;\n  right: 70%;\n  top: 30px;\n  width: 0;\n  height: 0;\n  border-style: solid;\n  border-width: 10px 10px 10px 0;\n  border-color: transparent #333333 transparent transparent;\n}\n.snip1506 h3,\n.snip1506 h4,\n.snip1506 p {\n  margin: 0 0 5px;\n}\n.snip1506 h3 {\n  font-weight: 600;\n  font-size: 1.2em;\n  font-family: 'Montserrat', Arial, sans-serif;\n}\n.snip1506 h4 {\n  color: #8c8c8c;\n  font-weight: 400;\n  letter-spacing: 2px;\n}\n.snip1506 p {\n  font-size: 0.9em;\n  letter-spacing: 1px;\n  opacity: 0.9;\n}\n.snip1506 .icons {\n  text-align: center;\n  width: 100%;\n}\n.snip1506 i {\n  padding: 10px 2px;\n  display: inline-block;\n  font-size: 18px;\n  font-weight: normal;\n  color: #ffffff;\n  opacity: 0.75;\n}\n.snip1506 i:hover {\n  opacity: 1;\n  transition: all 0.35s ease;\n  color: #4d4d4d;\n}\n.snip1506 a {\n  text-decoration: none;\n}\n\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/profile-card-left/profile-card-left.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\n<figure class=\"snip1506\">\n  <div class=\"profile-image\"><img src=\"http://res.cloudinary.com/dhuynu1ka/image/upload/v1500629370/MomentCam_20170715_214342_oxo3gr.jpg\"\n                                  alt=\"profile-sample2\"/>\n    <div class=\"icons\">\n      <a href=\"#\"><i class=\"ion-social-reddit\"></i></a>\n      <a href=\"#\"> <i class=\"ion-social-twitter\"></i>\n      </a><a href=\"#\"> <i class=\"ion-social-vimeo\"></i></a></div>\n  </div>\n  <figcaption>\n    <h3>Antarika Baruah</h3>\n    <h4>The Bride</h4>\n    <p>I'm killing time while I wait for life to shower me with meaning and happiness.</p>\n  </figcaption>\n</figure>\n\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/profile-card-left/profile-card-left.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfileCardLeftComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ProfileCardLeftComponent = (function () {
+    function ProfileCardLeftComponent() {
+    }
+    ProfileCardLeftComponent.prototype.ngOnInit = function () {
+    };
+    return ProfileCardLeftComponent;
+}());
+ProfileCardLeftComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-profile-card-left',
+        template: __webpack_require__("../../../../../src/app/profile-card-left/profile-card-left.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/profile-card-left/profile-card-left.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], ProfileCardLeftComponent);
+
+//# sourceMappingURL=profile-card-left.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/profile-card-right/profile-card-right.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Montserrat);", ""]);
+exports.push([module.i, "@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);", ""]);
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Open+Sans);", ""]);
+
+// module
+exports.push([module.i, ".snip1522 {\n  font-family: 'Open Sans', Arial, sans-serif;\n  position: relative;\n  float: left;\n  margin: 10px 1%;\n  min-width: 230px;\n  max-width: 315px;\n  width: 100%;\n  color: #141414;\n  text-align: left;\n  line-height: 1.4em;\n  font-size: 14px;\n  box-shadow: none !important;\n}\n\n.snip1522 * {\n  box-sizing: border-box;\n}\n\n.snip1522 .profile-image {\n  width: 26%;\n}\n\n.snip1522 .profile-image img {\n  border-radius: 5px;\n  max-width: 100%;\n  vertical-align: top;\n}\n\n.snip1522 .profile-image,\n.snip1522 figcaption {\n  float: right;\n}\n\n.snip1522 figcaption {\n  width: 70%;\n  background-color: #333333;\n  color: #fff;\n  padding: 25px;\n  display: inline-block;\n  margin-right: 4%;\n  border-radius: 5px;\n}\n\n.snip1522 figcaption:after {\n  content: '';\n  position: absolute;\n  left: 70%;\n  top: 30px;\n  width: 0;\n  height: 0;\n  border-style: solid;\n  border-width: 10px 0 10px 10px;\n  border-color: transparent transparent transparent #333333;\n}\n\n.snip1522 h3,\n.snip1522 h4,\n.snip1522 p {\n  margin: 0 0 5px;\n}\n\n.snip1522 h3 {\n  font-weight: 600;\n  font-size: 1.2em;\n  font-family: 'Montserrat', Arial, sans-serif;\n}\n\n.snip1522 h4 {\n  color: #8c8c8c;\n  font-weight: 400;\n  letter-spacing: 2px;\n}\n\n.snip1522 p {\n  font-size: 0.9em;\n  letter-spacing: 1px;\n  opacity: 0.9;\n}\n\n.snip1522 .icons {\n  text-align: center;\n  width: 100%;\n}\n\n.snip1522 i {\n  padding: 10px 2px;\n  display: inline-block;\n  font-size: 18px;\n  font-weight: normal;\n  color: #ffffff;\n  opacity: 0.75;\n}\n\n.snip1522 i:hover {\n  opacity: 1;\n  transition: all 0.35s ease;\n\n}\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/profile-card-right/profile-card-right.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<figure class=\"snip1522\">\n  <div class=\"profile-image\"><img src=\"http://res.cloudinary.com/dhuynu1ka/image/upload/v1500629369/MomentCam_20170715_214242_tpxv4k.jpg\" alt=\"profile-sample3\" />\n    <div class=\"icons\"><a href=\"#\"><i class=\"ion-social-reddit\"></i></a>\n      <a href=\"#\"> <i class=\"ion-social-twitter\"></i></a>\n      <a href=\"#\"> <i class=\"ion-social-vimeo\"></i></a>\n    </div>\n  </div>\n  <figcaption>\n    <h3>Amit Jain</h3>\n    <h4>The Groom</h4>\n    <p>Which is worse, that everyone has his price, or that the price is always so low.</p>\n  </figcaption>\n</figure>\n\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/profile-card-right/profile-card-right.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfileCardRightComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ProfileCardRightComponent = (function () {
+    function ProfileCardRightComponent() {
+    }
+    ProfileCardRightComponent.prototype.ngOnInit = function () {
+    };
+    return ProfileCardRightComponent;
+}());
+ProfileCardRightComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-profile-card-right',
+        template: __webpack_require__("../../../../../src/app/profile-card-right/profile-card-right.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/profile-card-right/profile-card-right.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], ProfileCardRightComponent);
+
+//# sourceMappingURL=profile-card-right.component.js.map
 
 /***/ }),
 
@@ -676,7 +964,7 @@ var SettingsComponent = (function () {
     return SettingsComponent;
 }());
 SettingsComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-settings',
         template: __webpack_require__("../../../../../src/app/settings/settings.component.html"),
         styles: [__webpack_require__("../../../../../src/app/settings/settings.component.css")]
@@ -939,89 +1227,89 @@ var TimelineCardComponent = TimelineCardComponent_1 = (function () {
     return TimelineCardComponent;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["O" /* Input */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
     __metadata("design:type", Number)
 ], TimelineCardComponent.prototype, "eventsMinDistance", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["O" /* Input */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
     __metadata("design:type", Array)
 ], TimelineCardComponent.prototype, "timelineElements", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["O" /* Input */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
     __metadata("design:type", String)
 ], TimelineCardComponent.prototype, "dateFormat", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["O" /* Input */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
     __metadata("design:type", Boolean)
 ], TimelineCardComponent.prototype, "disabled", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["O" /* Input */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
     __metadata("design:type", Boolean)
 ], TimelineCardComponent.prototype, "showContent", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_15" /* ViewChild */])('timelineWrapper'),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ElementRef */]) === "function" && _a || Object)
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('timelineWrapper'),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object)
 ], TimelineCardComponent.prototype, "timelineWrapper", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_15" /* ViewChild */])('eventsWrapper'),
-    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ElementRef */]) === "function" && _b || Object)
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('eventsWrapper'),
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _b || Object)
 ], TimelineCardComponent.prototype, "eventsWrapper", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_15" /* ViewChild */])('fillingLine'),
-    __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ElementRef */]) === "function" && _c || Object)
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('fillingLine'),
+    __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _c || Object)
 ], TimelineCardComponent.prototype, "fillingLine", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_15" /* ViewChild */])('eventsContent'),
-    __metadata("design:type", typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ElementRef */]) === "function" && _d || Object)
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('eventsContent'),
+    __metadata("design:type", typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _d || Object)
 ], TimelineCardComponent.prototype, "eventsContent", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_18" /* ViewChildren */])('timelineEvents'),
-    __metadata("design:type", typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["_19" /* QueryList */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["_19" /* QueryList */]) === "function" && _e || Object)
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChildren"])('timelineEvents'),
+    __metadata("design:type", typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["QueryList"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["QueryList"]) === "function" && _e || Object)
 ], TimelineCardComponent.prototype, "timelineEvents", void 0);
 TimelineCardComponent = TimelineCardComponent_1 = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-timeline-card',
         template: __webpack_require__("../../../../../src/app/timeline-card/timeline-card.component.html"),
         styles: [__webpack_require__("../../../../../src/app/timeline-card/timeline-card.component.css")],
         animations: [
-            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_20" /* trigger */])('contentState', [
-                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_21" /* state */])('active', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_22" /* style */])({
+            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["trigger"])('contentState', [
+                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["state"])('active', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["style"])({
                     position: 'relative', 'z-index': 2, opacity: 1,
                 })),
-                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_23" /* transition */])('right => active', [
-                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_22" /* style */])({
+                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["transition"])('right => active', [
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["style"])({
                         transform: 'translateX(100%)'
                     }),
-                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_24" /* animate */])('400ms ease-in-out', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_25" /* keyframes */])([
-                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_22" /* style */])({ opacity: 0, transform: 'translateX(100%)', offset: 0 }),
-                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_22" /* style */])({ opacity: 1, transform: 'translateX(0%)', offset: 1.0 })
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["animate"])('400ms ease-in-out', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["keyframes"])([
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["style"])({ opacity: 0, transform: 'translateX(100%)', offset: 0 }),
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["style"])({ opacity: 1, transform: 'translateX(0%)', offset: 1.0 })
                     ]))
                 ]),
-                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_23" /* transition */])('active => right', [
-                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_22" /* style */])({
+                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["transition"])('active => right', [
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["style"])({
                         transform: 'translateX(-100%)'
                     }),
-                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_24" /* animate */])('400ms ease-in-out', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_25" /* keyframes */])([
-                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_22" /* style */])({ opacity: 1, transform: 'translateX(0%)', offset: 0 }),
-                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_22" /* style */])({ opacity: 0, transform: 'translateX(100%)', offset: 1.0 })
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["animate"])('400ms ease-in-out', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["keyframes"])([
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["style"])({ opacity: 1, transform: 'translateX(0%)', offset: 0 }),
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["style"])({ opacity: 0, transform: 'translateX(100%)', offset: 1.0 })
                     ]))
                 ]),
-                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_23" /* transition */])('active => left', [
-                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_22" /* style */])({
+                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["transition"])('active => left', [
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["style"])({
                         transform: 'translateX(-100%)'
                     }),
-                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_24" /* animate */])('400ms ease-in-out', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_25" /* keyframes */])([
-                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_22" /* style */])({ opacity: 1, transform: 'translateX(0%)', offset: 0 }),
-                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_22" /* style */])({ opacity: 0, transform: 'translateX(-100%)', offset: 1.0 })
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["animate"])('400ms ease-in-out', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["keyframes"])([
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["style"])({ opacity: 1, transform: 'translateX(0%)', offset: 0 }),
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["style"])({ opacity: 0, transform: 'translateX(-100%)', offset: 1.0 })
                     ]))
                 ]),
-                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_23" /* transition */])('left => active', [
-                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_22" /* style */])({
+                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["transition"])('left => active', [
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["style"])({
                         transform: 'translateX(100%)'
                     }),
-                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_24" /* animate */])('400ms ease-in-out', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_25" /* keyframes */])([
-                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_22" /* style */])({ opacity: 0, transform: 'translateX(-100%)', offset: 0 }),
-                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_22" /* style */])({ opacity: 1, transform: 'translateX(0%)', offset: 1.0 })
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["animate"])('400ms ease-in-out', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["keyframes"])([
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["style"])({ opacity: 0, transform: 'translateX(-100%)', offset: 0 }),
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["style"])({ opacity: 1, transform: 'translateX(0%)', offset: 1.0 })
                     ]))
                 ]),
             ])
@@ -1083,7 +1371,6 @@ var TimelineHolderComponent = (function () {
         var _this = this;
         this._ConfigurationService = _ConfigurationService;
         this.showTimeLine = true;
-        console.log('constructor');
         this._ConfigurationService.getLayoutData('/assets/data/antarika-timeline.json').subscribe(function (res) {
             res.forEach(function (value, index, array) {
                 array[index]['date'] = new Date(value['date']);
@@ -1103,7 +1390,7 @@ var TimelineHolderComponent = (function () {
     return TimelineHolderComponent;
 }());
 TimelineHolderComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-timeline-holder',
         template: __webpack_require__("../../../../../src/app/timeline-holder/timeline-holder.component.html"),
         styles: [__webpack_require__("../../../../../src/app/timeline-holder/timeline-holder.component.css")]
@@ -1137,7 +1424,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/welcome/welcome.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  welcome works!\n</p>\n"
+module.exports = "<app-events-holder></app-events-holder>\n"
 
 /***/ }),
 
@@ -1161,11 +1448,15 @@ var WelcomeComponent = (function () {
     function WelcomeComponent() {
     }
     WelcomeComponent.prototype.ngOnInit = function () {
+        console.log('on ng init');
+    };
+    WelcomeComponent.prototype.ngOnChanges = function () {
+        console.log('on nh change');
     };
     return WelcomeComponent;
 }());
 WelcomeComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-welcome',
         template: __webpack_require__("../../../../../src/app/welcome/welcome.component.html"),
         styles: [__webpack_require__("../../../../../src/app/welcome/welcome.component.css")]
@@ -1208,7 +1499,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* enableProdMode */])();
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["enableProdMode"])();
 }
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */]);
 //# sourceMappingURL=main.js.map

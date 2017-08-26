@@ -69,6 +69,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 // imports
 exports.i(__webpack_require__("../../../../css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!../../../../postcss-loader/index.js?{\"ident\":\"postcss\"}!../../../material/prebuilt-themes/indigo-pink.css"), "");
 exports.i(__webpack_require__("../../../../css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!../../../../postcss-loader/index.js?{\"ident\":\"postcss\"}!../../../../bootstrap/dist/css/bootstrap.min.css"), "");
+exports.push([module.i, "@import url(https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/css/swiper.min.css);", ""]);
 
 // module
 exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n", ""]);
